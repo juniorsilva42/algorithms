@@ -23,19 +23,28 @@ public class BinarySearch {
         return binarySearch(arrangement, element, 0, arrangementLength);
     }
 
+    /**
+     * Método recursivo de busca binária
+     *
+     * @param arrangement Arranjo que será efetuado a busca
+     * @param element elemento que será buscado no arranjo
+     * @param minor índice do inicio do arranjo
+     * @param major índice do fim do arranjo
+     * @return O menor elemento do arranjo
+     */
     private static int binarySearch (int[] arrangement, int element, int minor, int major) {
-        int media = (minor + major) / 2;
+        int middle = (minor + major) / 2;
 
-        // Casos bases da recursão
+        // Casos-base das sub-rotinas da recursão
         if (minor > major)
             return -1;
 
-        if (arrangement[media] == element)
-            return media;
+        if (arrangement[middle] == element)
+            return middle;
 
-        if (arrangement[media] < element)
-            return binarySearch(arrangement, element, media + 1, major);
+        if (arrangement[middle] < element)
+            return binarySearch(arrangement, element, middle + 1, major);
         else
-            return binarySearch(arrangement, element, minor, media - 1);
+            return binarySearch(arrangement, element, minor, middle - 1);
     }
 }

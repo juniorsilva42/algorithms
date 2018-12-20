@@ -8,16 +8,25 @@ public class SearchMinorVectorElement {
         System.out.println(searchMinorVectorElement(arr, 0, arr.length - 1));
     }
 
-    private static int searchMinorVectorElement (int[] arrangement, int i, int f) {
-        if (i == f)
-            return arrangement[i];
+    /**
+     * Método de busca do menor elemento recursivo
+     *
+     * @param arrangement Arranjo que será efetuado a busca
+     * @param start índice do inicio do arranjo
+     * @param end índice do final do arranjo
+     * @return O menor elemento do arranjo
+     */
+    private static int searchMinorVectorElement (int[] arrangement, int start, int end) {
+        // Para caso-base da sub-rotina da recursão
+        if (start == end)
+            return arrangement[start];
 
-        int left, right, media;
+        int left, right, middle;
 
-        media = (i + f) / 2;
+        middle = (start + end) / 2;
 
-        left = searchMinorVectorElement(arrangement, i, media);
-        right = searchMinorVectorElement(arrangement, media + 1, f);
+        left = searchMinorVectorElement(arrangement, start, middle);
+        right = searchMinorVectorElement(arrangement, middle + 1, end);
 
         if (left < right)
             return left;
