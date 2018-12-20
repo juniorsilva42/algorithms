@@ -20,7 +20,7 @@ public class Permutation {
     }
 
     /**
-     * Método que, dada uma coleção de n números, retorna todas suas n permutações
+     * Método que, dada uma coleção de n números, retorna suas n permutações
      *
      * @param arrangementOfNums Arranjo alvo que será permutado
      * @return uma lista de permutações do arranjo
