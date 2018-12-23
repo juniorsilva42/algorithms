@@ -95,6 +95,14 @@ public class RSA {
         return new String((new BigInteger(encryptedMessage)).modPow(this.privKey, this.n).toByteArray());
     }
 
+    public BigInteger getPubkey () {
+        return this.pubkey;
+    }
+
+    public BigInteger getPrivKey () {
+        return this.privKey;
+    }
+
     /**
      *
      * Testes simples da classe

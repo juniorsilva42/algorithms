@@ -1,9 +1,9 @@
 // Jr Silva 22/12/2018
 // Implementação genérica de Comparable para os principais algoritmos de ordenação
 
-package sorts;
+package sorts.Implementation;
 
-public interface GenericSortImplementation {
+public interface GenericSortInterface {
 
     /**
      *
