@@ -1,3 +1,6 @@
+// Jr Silva 23/12/2018
+// Implementação simples de manipulação e operações sobre matrizes
+
 package ds.matrix;
 
 public class Matrix {
@@ -72,13 +75,10 @@ public class Matrix {
         for (int i = 0; i < getRows(); i++) {
             s.append("[ ");
 
-            for (int j = 0; j < getColumns(); j++) {
-                s.append(this.data[i][j]);
-                s.append(" ");
-            }
+            for (int j = 0; j < getColumns(); j++)
+                s.append(this.data[i][j]).append(" ");
 
-            s.append("]");
-            s.append("\n");
+            s.append("]").append("\n");
         }
 
         return s.toString();
