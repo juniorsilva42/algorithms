@@ -1,3 +1,6 @@
+// Jr Silva 22/12/2018
+// Implementação simples do algoritmo criptográfico assimétrico RSA
+
 package ciphers;
 
 import java.math.BigInteger;
@@ -28,6 +31,7 @@ public class RSA {
      * https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_de_Carmichael
      * https://medium.com/@tarcisiomarinho/algoritmo-de-criptografia-assim%C3%A9trica-rsa-c6254a3c7042
      * https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_totiente_de_Euler
+     * https://pt.khanacademy.org/computing/computer-science/cryptography/modern-crypt/v/euler-s-totient-function-phi-function
      *
     * */
     public RSA (int bits) {
