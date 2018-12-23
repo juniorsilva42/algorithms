@@ -1,7 +1,15 @@
+// Jr Silva 20/12/2018
+// Implementação de um método para efetuar a transposição de uma matriz quadrada A, ou seja, trocar suas linhas pelas colunas
+
 package others;
 
 public class TransposeSquareMatrix {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
         int matrix[][] = {
                 {1, 2, 4},
@@ -17,6 +25,7 @@ public class TransposeSquareMatrix {
      * Método main que executa uma transposição de uma matriz n, onde o que é linha passa a ser coluna
      *
      * @param matrix matriz que será transposta
+     *
      * @return void
      */
     public static void transposeSquareMatrix (int[][] matrix) {
@@ -34,6 +43,7 @@ public class TransposeSquareMatrix {
      * @param matrix matriz que será transposta
      * @param i índice das linhas da matriz
      * @param j índice das colunas da matriz
+     *
      * @return void
      */
     private static void exchange (int[][] matrix, int i, int j) {
@@ -46,6 +56,7 @@ public class TransposeSquareMatrix {
      * Método helper que exibe a matriz final
      *
      * @param matrix matriz que será mostrada em tela
+     *
      * @return void
      */
     private static void show (int[][] matrix) {

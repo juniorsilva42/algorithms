@@ -1,7 +1,15 @@
+// Jr Silva 20/12/2018
+// Implementação simples de um método recursivo para o somatório dos elementos de um arranjo A
+
 package others;
 
 public class SumArrangement {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
         int[] arr = {3, 4, 10};
 
@@ -13,7 +21,8 @@ public class SumArrangement {
      *
      * @param arrangement Arranjo que será efetuado a busca
      * @param i indice do inicio do arranjo
-     * @return o somatório do arranjo
+     *
+     * @return int
      */
     private static int sumArrangement (int[] arrangement, int i) {
         int arrangementLength = arrangement.length;

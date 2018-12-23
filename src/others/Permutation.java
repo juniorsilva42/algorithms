@@ -1,3 +1,6 @@
+// Jr Silva 20/12/2018
+// Implementação simples de um método que, dada uma coleção de n números, retorna suas n permutações
+
 package others;
 
 import java.util.ArrayList;
@@ -7,6 +10,11 @@ import java.util.stream.Collectors;
 
 public class Permutation {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
 
         int[] arr = {1, 2, 3};
@@ -23,7 +31,8 @@ public class Permutation {
      * Método que, dada uma coleção de n números, retorna suas n permutações
      *
      * @param arrangementOfNums Arranjo alvo que será permutado
-     * @return uma lista de permutações do arranjo
+     *
+     * @return List<List<>>
      */
     private static List<List<Integer>> permute (int[] arrangementOfNums) {
 

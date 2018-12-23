@@ -1,9 +1,17 @@
+// Jr Silva 20/12/2018
+// Implementação simples de um método recursivo para efetuar uma busca binária em um arranjo
+
 package searchs;
 
 import java.util.Arrays;
 
 public class BinarySearch {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
         int[] arr = {3, 5, 6, 7, 10, 12, 1, 2, 16, 34};
 
@@ -18,6 +26,14 @@ public class BinarySearch {
             System.out.println("Elemento encontrado na posição "+resultado);
     }
 
+    /**
+     * Procedimento que executa a busca binária
+     *
+     * @param arrangement Arranjo que será efetuado a busca
+     * @param element elemento que será buscado no arranjo
+     *
+     * @return int
+     */
     public static int binarySearchExecute (int[] arrangement, int element) {
         int arrangementLength = arrangement.length - 1;
         return binarySearch(arrangement, element, 0, arrangementLength);
@@ -30,7 +46,8 @@ public class BinarySearch {
      * @param element elemento que será buscado no arranjo
      * @param minor índice do inicio do arranjo
      * @param major índice do fim do arranjo
-     * @return O menor elemento do arranjo
+     *
+     * @return int
      */
     private static int binarySearch (int[] arrangement, int element, int minor, int major) {
         int middle = (minor + major) / 2;

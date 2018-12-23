@@ -1,9 +1,17 @@
+// Jr Silva 20/12/2018
+// Implementação simples de um método que, dada um vetor n números, faça sua rotação à direita k vezes
+
 package others;
 
 import java.util.Arrays;
 
 public class RotateVector {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
 
         int[] arr = {3, 5, 6, 7, 10, 12, 2, 16, 34};
@@ -19,6 +27,7 @@ public class RotateVector {
      *
      * @param vector Arranjo que será rotacionado
      * @param n número de vezes que o arranjo será rotacionado
+     *
      * @return void
      */
     public static void rotateVector (int[] vector, int n) {
@@ -32,6 +41,7 @@ public class RotateVector {
      * Método helper que rotaciona um arranjo para direita
      *
      * @param vector Arranjo que será rotacionado
+     *
      * @return void
      */
     private static void moveOnRight (int[] vector) {

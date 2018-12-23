@@ -1,7 +1,15 @@
+// Jr Silva 20/12/2018
+// Implementação simples de um método recursivo para retornar a série de um número n
+
 package others;
 
 public class Fibonacci {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
 
         for (int i = 1; i <= 10; i++)
@@ -12,7 +20,8 @@ public class Fibonacci {
      * Método recursivo que executa a série de fibonacci em um dado numero
      *
      * @param n número alvo para obter a série de fibonacci
-     * @return a série de fibonnaci de n
+     *
+     * @return int
      */
     private static int fibonacci (int n) {
         if (n == 1 ||  n == 2)

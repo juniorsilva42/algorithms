@@ -1,7 +1,15 @@
+// Jr Silva 20/12/2018
+// Implementação simples de um método que retornar o número faltante dada um arranjo a
+
 package others;
 
 public class WhereIsTheNumber {
 
+    /**
+     *
+     * Testes simples da classe
+     *
+     * */
     public static void main (String... args) {
         int[] arr = {1, 2, 4, 5, 6};
 
@@ -12,7 +20,8 @@ public class WhereIsTheNumber {
      * Método para obter um número faltante em um dado arranjo
      *
      * @param arrangement Arranjo que será efetuado a varredura
-     * @return o número faltante no arranjo
+     *
+     * @return int
      */
     private static int whereIsTheNumber (int[] arrangement) {
         int n = arrangement.length + 1;
