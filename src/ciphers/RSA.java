@@ -45,17 +45,18 @@ public class RSA {
         // Calculando n pq
         this.n = p.multiply(q);
 
-        // Calcula o totiente de N, phi(N), sendo Q-1 * P-1, pois eles são primos phi(N) = (Q-1)*(P-1)
+        // Calcula o totiente de N, phi(N)
+        // phi(N) = (Q-1)*(P-1)
         BigInteger m = (p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
 
         // Calculando a função de Carmichael
-        // Onde define-se como menor inteiro m onde a^m = 1 (mod n), onde n = GCD(p-1, q-1)
-        // mdc(phi(N), E) == 1, se não satisfazer a isso, terá que ser gerado outro número aleatório E
+        // O menor inteiro m onde a^m = 1 (mod n), onde n = GCD(p-1, q-1)
+        // GCD(phi(N), E) == 1, se não satisfazer a isso, terá que ser gerado outro número aleatório E
         this.pubkey = new BigInteger("3");
         while (m.gcd(this.pubkey).intValue() > 1)
             this.pubkey = this.pubkey.add(new BigInteger("2"));
 
-        // onde a chave privada seja inversa multiplicativa do seu módulo
+        // chave privada inversa multiplicativa do seu módulo
         this.privKey = this.pubkey.modInverse(m);
     }
 
