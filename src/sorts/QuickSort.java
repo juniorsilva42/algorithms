@@ -90,6 +90,15 @@ public class QuickSort implements GenericSortImplementation {
         return left;
     }
 
+    /**
+     *
+     * Método helper que compara o elemento de arranjo v com um arranjo w e indica o menor deles
+     *
+     * @param v subparte do arranjo que será verificado
+     * @param w outra subparte do arranjo que será verificado
+     *
+     * @return boolean
+     * */
     static <T extends Comparable<T>> boolean less(T v, T w) {
         return v.compareTo(w) < 0;
     }

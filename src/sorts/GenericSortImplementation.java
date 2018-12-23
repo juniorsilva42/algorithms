@@ -3,14 +3,15 @@
 
 package sorts;
 
-import java.util.Arrays;
-import java.util.List;
-
 public interface GenericSortImplementation {
 
+    /**
+     *
+     * Método main que ordena um arranjo qualquer
+     *
+     * @param arrangement arranjo que será efetuado a ordenação
+     *
+     * @return generic T
+     * */
     <T extends Comparable<T>> T[] sort(T[] arrangement);
-
-    default <T extends Comparable<T>> List<T> sort(List<T> arrangement){
-        return Arrays.asList(sort(arrangement.toArray((T[]) new Comparable[arrangement.size()])));
-    }
 }
