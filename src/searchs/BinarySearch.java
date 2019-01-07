@@ -18,7 +18,7 @@ public class BinarySearch {
          // {1, 2, 3, 5, 6, 7, 10, 12, 16, 34}
 
         Arrays.sort(arr);
-        int resultado = binarySearchExecute(arr, 123);
+        int resultado = binarySearch(arr, 1);
 
         if (resultado < 0)
             System.out.println("Elemento não encontrado.");
@@ -34,7 +34,7 @@ public class BinarySearch {
      *
      * @return int
      */
-    public static int binarySearchExecute (int[] arrangement, int element) {
+    public static int binarySearch (int[] arrangement, int element) {
         int arrangementLength = arrangement.length - 1;
         return binarySearch(arrangement, element, 0, arrangementLength);
     }
