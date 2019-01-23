@@ -115,7 +115,6 @@ public class RSA {
         String string = "https://firebase.google.com/docs/web/setup?hl=pt-br";
 
         String encryptedString = rsa.encrypt(string);
-
         System.out.println("Mensagem original: " + string + "\nMensagem encriptada: " + encryptedString);
     }
 

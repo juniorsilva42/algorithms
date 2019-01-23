@@ -24,7 +24,7 @@ public class QuickSort implements GenericSortInterface {
         quickSort.sort(arr);
         quickSort.sort(arr2);
 
-        show(arr);
+        show(arr2);
     }
 
     /**
@@ -39,7 +39,7 @@ public class QuickSort implements GenericSortInterface {
     public <T extends Comparable<T>> T[] sort(T[] arrangement) {
         int arrangementLength = arrangement.length - 1;
 
-        executeSort(arrangement, 0, arrangementLength);
+        sort(arrangement, 0, arrangementLength);
         return arrangement;
     }
 
@@ -53,13 +53,14 @@ public class QuickSort implements GenericSortInterface {
      *
      * @return void
      * */
-    private static <T extends Comparable<T>> void executeSort (T[] arrangement, int left, int right) {
+    private static <T extends Comparable<T>> void sort (T[] arrangement, int left, int right) {
         if (left < right) {
             int pivot = partition(arrangement, left, right);
-            executeSort(arrangement, left, pivot - 1);
-            executeSort(arrangement, pivot, right);
+            sort(arrangement, left, pivot - 1);
+            sort(arrangement, pivot, right);
         }
     }
+
 
     /**
      *
